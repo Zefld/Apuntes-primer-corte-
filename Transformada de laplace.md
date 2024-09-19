@@ -1,75 +1,75 @@
 # Transformada de LaPlace
 ## Sistema
-Agregue todos los subtítulos que considere necesarios para estructurar el contenido de la clase. Es importante que considere jerarquías de los temas para definir el orden de estos subtítulos. Cada subtítulo debe ir numerado como una sección, de la manera en que lo presenta esta plantilla
+Un sistema es una combinacion de componentes que actúan conjuntamente para alcanzar un objetivo especifico. La combinacion de componentes se puede representar por medio de reglas o principios que relacionan entradas con salidas.
 
-## 2. Definiciones
-Utilice el símbolo '>' para crear bloques de texto. En la presente plantilla estas cajas están reservadas para resaltar las definiciones, las cuales deben ser breves, y la palabra o frase que se está definiendo debe estar en letra itálica. El inicio del bloque de texto debe realizarse con el emoji 🔑 .
->🔑 *Definición:* descripción precisa y clara del significado de una palabra, término, concepto o fenómeno. Es una explicación que establece los límites y el alcance de aquello que se está definiendo, aclarando su naturaleza, características esenciales y, en algunos casos, su relación con otros conceptos.
+## Sistema dinámico
+- Un sistema se llama dinámico si su salida en el presente depende de una entrada en el pasado.
+- Si su salida está en curso depende solamente de la entrada en curso, el sistema se comoce como estático.
 
-## 3. Subsecciones
-Las subsecciones pueden utilizarse para sub dividir ciertos temas que se tienen en clases, por ejemplo si se está trabajandolos conversores D/A, puede ser necesario subdividir este en circuito de resistencias ponderadas y circuito de escalera R2R. 
-### 3.1. Título de subsecciones
-Para la creación de estas subsecciones debe utilizar un tamaño de letra más pequeño, por lo tanto utilice la etiqueta '###' 
-### 3.2. Numeración de subsecciones
-Siga la numeración de la sección seguida de un punto y luego el número de la subsección.
+## Planta
+- Es todo lo fisico que permite que se lleve a cabo un proceso.
+- Puede ser representado matemáticamente.
+- Puede ser representado a través de uno o varios sistemas
 
-## 4. Ejemplos
-Si en algún caso pretende dar un ejemplo explicativo ya sea a través de texto o através de ecuaciones matemáticos, utilizar la palabra 'Ejemplo' seguido de una numeración consecutiva dentro de la clase. Utilice el emoji 💡 antecediendo la palabra.
+## Proceso
+- Es la secuencia de pasos que permite el desarrollo, o fabricación de un objetivo o producto
+- En el area de control se usa coo sinonimo de planta (Aunque en sentido estricto no lo son)
 
-## 5. Ecuaciones
-Para la edición de ecuaciones debe utilizar la etiqueta '$$' al comienzo y final de la ecuación para que la ecuación quede centrada ocupando una línea. Si se quiere que la ecuación quede integrada en el texto debe utilizar la etiqueta '$' al comienzo y final de la ecuación. Las ecuaciones pueden ser editadas utilizando el código LATEX, en el siguiente enlace encuentran un editor de ecuaciones que les genera el código. http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp . Sin embargo hay muchas otras herramientas que pueden utilizar para esto.
+## Modelos dinámicos
+- En control interesa obtener un modelo matemático que relacione las variables de interés con el tiempo
+  f(t)
+- Es necesario cuantificar cuanto cambia las variables de interés con respecto al tiempo
+$$\frac{df(t)}{dt}$$
 
-💡**Ejemplo 1:** si se va a representar la ecuación de la ley de Ohm se puede mostrar así $R=\frac{V}{I}$ o también,
+## Recordando calculo diferencial
+Definicion de la derivada
 
-$$R=\frac{V}{I}$$
+lim cuando h tiende a 0 de $$\frac{f(x+h)}{h}$$
 
-## 6. Figuras
-Todas las figuras que incluya deben ser generadas por ustedes, **no utilizar las figuras de las presentaciones**. Para incluir figuras puede seguir los siguientes pasos:
-* Primero escribimos ![]().
-* Después escribimos, dentro de los corchetes, el texto alternativo. Este es opcional y solo entra en acción cuando no se puede cargar la imagen correctamente.
-* Después escribimos, dentro de los paréntesis, la ubicación del archivo (ya sea una url o una ubicación dentro de algun folder local). Se recomienda poner las imágenes en una carpeta que se llame imágenes dentro del repositorio github para que no tengan problemas al cargar las imágenes.
+## Como lucen los modelos de ecuaciones duferenciales
+- Son combinaciones lineales de derivadas de diferente orden:
+  
+a1 $$\frac{d2F}{dt2}$$ + a2 $$\frac{dF}{dt}$$ + a3F = u(t)
 
-💡**Ejemplo 2:**
+- Donde F es la salida del sistema.
+- U es la entrada del sistema.
+- La solución no es un número, es una función.
 
-![Figura de prueba](images/plantilla/Captura2.PNG)
+## Caracteriaticas de una ecuacion diferencial
+Pueden ser:
+- Ecuaciones lineales invariantes en el tiempo
+- Ecuaciones lineales variantes en el tiempo
+- Ecuaciones no lineales invariantes en el tiempo
+- Ecuaciones no lineales variantes en el tiempo
 
-Figura 1. Figura de prueba
+## Sistemas lineales y no lineales
+- Un sistema se considera lineal cuando cumple con el principio de superposición
+  - La respuesta de un sistema al que se le aplican 2 o más exitaciones simultaneas, es la suma de las respuestas                individuales.
+ - Un sistema lineal tambien tiene la característica de proporcionalidad entre la entrada y la salida
+ - Los sistemas no lineales no cumplen con el principio de superposicion
+ - Los sistens bi lineales se linealizan en un punto de operacion, en el cual se cumple el principio de superposicion
 
-Incluya la respectiva etiqueta a modo de descripción de la figura y mantenga numeración consecutiva para todas las figuras de la clase.
+## Modelamiento y validacion
+- Al aplicar leyes fisicas a un modelo matemático de un sistema, se debe tener en cuenta que hay un nivel de incertidumbre en el resultado final
+- Es necesario validar el modelo con respecto al sistema físico comparando la salida del modelo con la salida del modelo fisico, si no es aceptable la diferencia se debe modificar el modelo hasta conseguir una diferencia aceptable.
 
-## 7. Tablas
-En caso de necesitar la inclusión de tablas para organizar información se recomienda el uso de la herramienta del siguiente enlace https://www.tablesgenerator.com/markdown_tables , la cual permite organizar la información dentro de la tabla y genera el código markdown automáticamente:
+## Influencia de parametros
+- Comportamiento sinusoidal
+- Decaimiento exponencial
+- Combinacion de ambos
 
-💡**Ejemplo 3:** 
+## Transformada de LaPlace
+- Es un cambio de espacio geometrico del dominio del tiempo hacia el dominio de la frecuencia compleja.
+- Ecuaciones con derivadas son transformadas en ecuaciones algebraicas
+- La transformada de LaPlace muestra las exponenciales y sinusoidales presentes en una señal.
 
-| **Resultado** | **x = número de intentos hasta primer éxito** |
-|---------------|-----------------------------------------------|
-|       S       |                       1                       |
-|       FS      |                       2                       |
-|      FFS      |                       3                       |
-|      ...      |                      ...                      |
-|    FFFFFFS    |                       7                       |
-|      ...      |                      ...                      |
+## Calculo de transformada inversa
+- Si las funciones son simples, utilizar la tabla de transformadas
+- Si las funciones son una combinacion o composicion de varias funciones:
+  - Calcular la integral de la definicion de la transformada inversa de LaPlace
+  - Realizar una expansión en fracciones parciales para obtener una suma de funciones mucho más simples que se puedan encontrar en las tablas de transformadas. 
 
-Tabla 1. Tabla de ejemplo
+## Conclusiones
+Por medio de las ecuaciones diferenciales y la transformada de LaPlace podemos realizar modelamientos matemáticos acerca de fenomenos fisicos; además, la transformada de LaPlace nos permite resolver ecuaciones diferenciales de una manera rápida.
 
-Cada tabla debe llevar la etiqueta que describa su contenido y numeración consecutiva para todas las tablas
 
-## 8. Código
-Teniendo en cuenta que el curso requiere del desarrollo de código matlab, c, c++ u otro. Si requiere incluir pequeños segmentos de código en los apuntes hágalos de la siguiente manera:
-
-💡**Ejemplo 4:**
-```
-var sumar2 = function(numero) {
-  return numero + 2;
-}
-```
-
-## 9. Ejercicios
-Deben agregar 2 ejercicios con su respectiva solución, referentes a los temas tratados en cada una de las clases. Para agregar estos, utilice la etiqueta #, es decir como un nuevo título dentro de la clase con la palabra 'Ejercicios'. Cada uno de los ejercicios debe estar numerado y con su respectiva solución inmediatamente despues del enunciado. Antes del subtitulo de cada ejercicio incluya el emoji 📚
-
-## 10. Conclusiones
-Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
-
-## 11. Referencias
-Agregue un subtítulo al final donde pueda poner todas las referencias consultadas incluyendo el origen o fuente de los ejercicios planteados. Tambien dentro del texto referencie los textos o artículos consultados y las figuras y tablas dentro de la explicación de las mismas.
